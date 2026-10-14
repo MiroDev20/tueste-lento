@@ -40,7 +40,7 @@ Quiero definir el `README.md` del proyecto antes de continuar con su desarrollo,
 
 ### 🎧 Lo que escuché en la sesión
 
-![Tarjeta musical: How you see it can change how it feels](./journaling-supplies/youtube-music-card.svg)
+🎵 [*How you see it can change how it feels — Halloween Jazz LoFi for Study, Coffee Break*](https://www.youtube.com/watch?v=3q1MVKupvm8&t=3544s) — chill chill journal
 
 ### 🛠️ Trabajo realizado
 
