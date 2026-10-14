@@ -9,12 +9,12 @@
 - [Introducción](#-introducción)
 - [Descripción del proyecto](#-descripción-del-proyecto)
 - [Características principales](#-características-principales)
-- [Estructura del proyecto](#-estructura-del-proyecto)
-- [Cómo abrir el sitio](#-cómo-abrir-el-sitio)
+- [Estructura del proyecto](#estructura-del-proyecto)
+- [Cómo abrir el sitio](#cómo-abrir-el-sitio)
 - [Secciones del sitio](#-secciones-del-sitio)
-- [Tecnologías utilizadas](#-tecnologías-utilizadas)
+- [Tecnologías utilizadas](#tecnologías-utilizadas)
 - [Diseño y estilos](#-diseño-y-estilos)
-- [Personalización](#-personalización)
+- [Personalización](#personalización)
 - [Créditos](#-créditos)
 
 ## ☕ Introducción
@@ -47,6 +47,7 @@ experiencia visual agradable.
 * Enfoque en accesibilidad y simplicidad, sin depender de frameworks externos.
 * Experiencia visual enfocada en la calidad del café y la sensación de tranquilidad.
 
+<a id="estructura-del-proyecto"></a>
 ## 🗂️ Estructura del proyecto
 
 ```mermaid
@@ -59,6 +60,7 @@ flowchart RL
     F["asstes/fonts/"] --> A
 ```
 
+<a id="cómo-abrir-el-sitio"></a>
 ## ▶️ Cómo abrir el sitio
 
 👉 [Ver el sitio web](https://mirodev20.github.io/tueste-lento/)
@@ -71,6 +73,7 @@ flowchart RL
 - **Ambiente:** reúne imágenes del espacio y la experiencia de la cafetería.
 - **Visítanos:** ofrece información para conocer y visitar el lugar.
 
+<a id="tecnologías-utilizadas"></a>
 ## 🛠️ Tecnologías utilizadas
 
 - **HTML5:** estructura y contenido del sitio.
@@ -98,6 +101,7 @@ El diseño de *Tueste Lento* utiliza una paleta cálida inspirada en el café y 
 
 Los colores están definidos como propiedades personalizadas de CSS para facilitar su reutilización y mantenimiento.
 
+<a id="personalización"></a>
 ## 🖌️ Personalización
 
 Como parte de una futura iteración, me gustaría renovar la identidad visual del sitio:
