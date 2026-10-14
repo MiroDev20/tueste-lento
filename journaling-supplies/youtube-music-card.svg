@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="1200" height="540" viewBox="0 0 1200 540"
+     role="img" aria-labelledby="card-title card-desc">
+
+  <!-- =========================================================
+       CONFIGURACIÓN Y DIMENSIONES
+       Plantilla reutilizable de tarjeta musical para journal.md.
+       Edita los valores indicados en los comentarios EDITAR.
+       La composición sigue una tarjeta horizontal compacta.
+       ========================================================= -->
+
+  <title id="card-title">Tarjeta de vídeo musical de YouTube</title>
+  <desc id="card-desc">Tarjeta oscura con portada, duración, canal y título. Al activarla, abre el vídeo de YouTube.</desc>
+
+  <defs>
+    <!-- EDITAR: estos estilos centralizan la paleta de la tarjeta. -->
+    <style>
+      .channel-name {
+        font-family: Inter, "Segoe UI", Arial, sans-serif;
+        font-size: 27px;
+        font-weight: 700;
+        fill: #F1F1F1;
+      }
+      .video-title {
+        font-family: Inter, "Segoe UI", Arial, sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+        fill: #F1F1F1;
+      }
+      .duration {
+        font-family: Inter, "Segoe UI", Arial, sans-serif;
+        font-size: 19px;
+        font-weight: 700;
+        fill: #FFFFFF;
+      }
+      .muted { fill: #AAAAAA; }
+    </style>
+
+    <!-- Recorte de portada: empieza en el borde superior y sigue el contorno exterior. -->
+    <clipPath id="thumbnail-clip">
+      <path d="M20 1 H1180 Q1199 1 1199 20 V292 H1 V20 Q1 1 20 1 Z"/>
+    </clipPath>
+
+    <!-- Recorte circular del avatar del canal. -->
+    <clipPath id="avatar-clip">
+      <circle cx="66" cy="368" r="39"/>
+    </clipPath>
+  </defs>
+
+  <!-- =========================================================
+       ENLACE AL VÍDEO
+       EDITAR: sustituye VIDEO_ID por el identificador real.
+       El enlace envuelve toda la tarjeta, no solo el icono.
+       ========================================================= -->
+  <a href="https://www.youtube.com/watch?v=3q1MVKupvm8&amp;t=3544s"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Abrir en YouTube: How you see it can change how it feels — Halloween Jazz LoFi for Study, Coffee Break">
+
+    <!-- Fondo, borde y superficie de la tarjeta. -->
+    <rect x="1" y="1" width="1198" height="538" rx="20"
+          fill="#0F0F0F" stroke="#303642" stroke-width="1.5"/>
+
+    <!-- =======================================================
+         PORTADA Y DURACIÓN
+         EDITAR: cambia assets/music/thumbnail.jpg por una URL
+         HTTPS o una ruta relativa al archivo SVG.
+         ======================================================= -->
+    <g id="video-thumbnail" clip-path="url(#thumbnail-clip)">
+      <image href="https://i.ytimg.com/vi/3q1MVKupvm8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLAj8bJozqJ_q463KoISuyjWXQ9w3w"
+             xlink:href="https://i.ytimg.com/vi/3q1MVKupvm8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLAj8bJozqJ_q463KoISuyjWXQ9w3w"
+             x="1" y="1" width="1198" height="291"
+             preserveAspectRatio="xMidYMid slice"
+             aria-label="Portada del vídeo musical"/>
+      <!-- Fondo de reserva visible si la imagen no carga. -->
+      <!-- <rect x="1" y="1" width="1198" height="291"
+            fill="#181818" opacity="0.08"/> -->
+    </g>
+
+    <!-- EDITAR: duración del vídeo, por ejemplo 3:45 o 1:24:17. -->
+    <g id="video-duration">
+      <rect x="1080" y="244" width="94" height="34" rx="6"
+            fill="#000000" opacity="0.78"/>
+      <text x="1127" y="267" class="duration" text-anchor="middle">5:00:00</text>
+    </g>
+
+    <!-- Separador discreto entre portada e información. -->
+    <line x1="1" y1="292" x2="1199" y2="292" stroke="#242424"/>
+
+    <!-- =======================================================
+         INFORMACIÓN DEL CANAL
+         EDITAR: avatar y nombre del canal.
+         Para un canal sin verificación, elimina el grupo
+         channel-verified completo.
+         ======================================================= -->
+    <g id="channel-information">
+      <circle cx="66" cy="368" r="41" fill="#303642"/>
+      <image href="https://yt3.ggpht.com/xHar-3rbJCrOhAqI1kv4EqMxhDhLILHpn84yeUnVQSy76t2NClORvSaiC1ClK6KWYRJzaOgfIg=s88-c-k-c0x00ffffff-no-rj"
+             xlink:href="https://yt3.ggpht.com/xHar-3rbJCrOhAqI1kv4EqMxhDhLILHpn84yeUnVQSy76t2NClORvSaiC1ClK6KWYRJzaOgfIg=s88-c-k-c0x00ffffff-no-rj"
+             x="27" y="329" width="78" height="78"
+             preserveAspectRatio="xMidYMid slice"
+             clip-path="url(#avatar-clip)"
+             aria-label="Imagen de perfil del canal"/>
+
+      <!-- EDITAR: nombre del canal. Mantén el texto en una línea. -->
+      <text x="122" y="366" class="channel-name">
+        <tspan>chill chill journal</tspan>
+      </text>
+
+      <!-- EDITAR: insignia opcional. Elimínala si no corresponde. -->
+      <g id="channel-verified" transform="translate(355 350)"
+         aria-label="Canal verificado">
+        <circle cx="0" cy="0" r="11" fill="#D7DCE5"/>
+        <path d="M-5 0 L-1.5 3.5 L5 -4"
+              fill="none" stroke="#0F0F0F" stroke-width="2.4"
+              stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+
+      <!-- Icono visual de YouTube. -->
+      <g id="youtube-icon" transform="translate(1110 344)">
+        <rect x="0" y="0" width="58" height="39" rx="11" fill="#FF0033"/>
+        <path d="M23 10 L23 29 L39 19.5 Z" fill="#FFFFFF"/>
+      </g>
+    </g>
+
+    <!-- =======================================================
+         TÍTULO DEL VÍDEO
+         EDITAR: sustituye el texto. Usa uno o dos tspan para
+         controlar manualmente los saltos de línea.
+         ======================================================= -->
+    <g id="video-title-text">
+      <text x="31" y="448" class="video-title">
+        <tspan x="31" dy="0">How you see it can change how it feels 🎃</tspan>
+        <tspan x="31" dy="38">Halloween Jazz LoFi for Study, Coffee Break</tspan>
+      </text>
+    </g>
+
+    <!-- Área de enlace transparente que garantiza que toda la tarjeta
+         sea activable incluso en zonas sin contenido visible. -->
+    <rect x="1" y="1" width="1198" height="538" rx="20"
+          fill="#FFFFFF" opacity="0.001" pointer-events="all"/>
+  </a>
+</svg>
